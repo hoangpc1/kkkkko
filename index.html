@@ -1,3 +1,360 @@
-<html>
-  <h2>lll
-    </html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Trang quản trị tài khoản Unica.vn</title>
+    <meta name="csrf-token" content="MXFDbHFKSjJVJjsOEBUQUXs9GjQhEw1VQjZ7ODwuf0YBHQItBC0HCg==">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-signin-client_id" content="1001498436975-46u7ibil1e3pest1b89a4ig4omlt4bgu.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="https://static.unica.vn/icon/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/css/util.css">
+    <link rel="stylesheet" type="text/css" href="https://id.unica.vn/css/main.css?v=1.2">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('/images/bg-01.jpg');padding-top: 10%;">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script src="https://apis.google.com/js/api:client.js"></script>
+<style type="text/css">
+    .padding25{
+        padding: 25px;
+    }
+</style>
+<div class="text-center form-group" style="width: 100%">
+    <span class="login100-form-title p-b-10">
+        <img src="https://id.unica.vn/images/logo.png" />
+    </span>
+</div>
+<div class="row"></div>
+<div class="wrap-login100 p-l-110 p-r-110 p-t-20 p-b-13">
+    <form id="login_normal" name="login_normal" method="POST" class="login100-form validate-form flex-sb flex-w">
+        <input id="form-token" type="hidden" name="_csrf" value="MXFDbHFKSjJVJjsOEBUQUXs9GjQhEw1VQjZ7ODwuf0YBHQItBC0HCg=="/>
+        <div class="p-t-10 p-b-10 col-md-12" style="text-align: center;color: #555">
+            <h3>ĐĂNG NHẬP</h3>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Email không được để trống">
+            <input value="" class="input100" type="text" name="email" placeholder="Nhập số điện thoại hoặc email"  value="" >
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="p-t-1"> &nbsp;
+        </div>
+        <div class="wrap-input100 validate-input" data-validate = "Mật khẩu không được để trống">
+            <input value="" class="input100" type="password" name="pass" placeholder="Nhập mật khẩu" >
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="select-user" style="width:100%">
+            <div class="clearfix"></div>
+            <div class="p-t-1"> &nbsp;
+            </div>
+        </div>
+
+        <div class="wrap-input100 validate-input pin-code" style="display:none;margin-top:20px;">
+            <input placeholder="Mã pin code" class="input100" type="text" name="pin_code" >
+            <span class="focus-input100"></span>
+        </div>
+
+                <div style="margin-top: 10px;margin-bottom: 0px;" class="alert alert-danger alert-dismissable col-md-12 error-loginservice"></div>
+        <div class="container-login100-form-btn m-t-17">
+            <button form="login_normal" type="button" class="login100-form-btn login-service">
+                ĐĂNG NHẬP
+            </button>
+        </div>
+        <div class="container-login100-form-btn m-t-17 " style="display: none;">
+            <button form="login_normal" type="submit" class="login100-form-btn">
+                ĐĂNG NHẬP
+            </button>
+        </div>
+        <div class="p-t-10 p-b-9 col-md-12 padding25">
+            <center>
+            <span class="txt1">
+                Hoặc đăng nhập với
+            </span>
+            </center>
+        </div>
+        <div class="clearfix"></div>
+
+        <div id="gSignInWrapper">
+            <div id="customBtn" class="customGPlusSignIn">
+                <i class="fa fa-google"></i>
+                <span class="buttonText">Google</span>
+            </div>
+        </div>
+        <a style="width: 49%;" href="javascript:void(0)" onclick="return login();" class="btn-face m-b-20">
+            <i class="fa fa-facebook-official"></i>
+            Facebook
+        </a>
+        <div class="w-full text-center padding25">
+            <span class="txt2">
+                Bạn chưa có tài khoản?
+            </span>
+            <a href="/register" class="txt2 bo1">
+                Đăng ký mới
+            </a>
+            <br/>
+            <a style="color: red;" href="/reset_pass" class="txt2 m-l-5">
+                Quên mật khẩu?
+            </a>
+
+        </div>
+        
+        <div class="clearfix"></div>
+
+    </form>
+</div>
+<script>
+
+    var googleUser = {};
+    var startApp = function() {
+        gapi.load('auth2', function(){
+            // Retrieve the singleton for the GoogleAuth library and set up the client.
+            auth2 = gapi.auth2.init({
+                client_id: '1001498436975-46u7ibil1e3pest1b89a4ig4omlt4bgu.apps.googleusercontent.com',
+                cookiepolicy: 'https://id.unica.vn',
+                // Request scopes in addition to 'profile' and 'email'
+                //scope: 'additional_scope'
+            });
+            attachSignin(document.getElementById('customBtn'));
+        });
+    };
+
+    function attachSignin(element) {
+        // console.log(element.id);
+        auth2.attachClickHandler(element, {},
+            function(googleUser) {
+                var gg_id = googleUser.getBasicProfile().getId();
+                var fullname = googleUser.getBasicProfile().getFamilyName() + ' ' + googleUser.getBasicProfile().getGivenName();
+                var email = googleUser.getBasicProfile().getEmail();
+                var avatar = googleUser.getBasicProfile().getImageUrl();
+                /*console.log('gg_id: '+ gg_id);
+                console.log('email: '+ email);
+                console.log('fullname: '+ fullname);
+                console.log('avatar: '+ avatar);*/
+                //return false;
+                if(email != ''){
+                    $.ajax({
+                        url: '/site/login_gg',
+                        type: 'post',
+                        data: {
+                            'id': gg_id,
+                            'email': email,
+                            'name': fullname,
+                            'avatar': avatar,
+                            '_csrf' : $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function (response) {
+                            location.href = response.data.url;
+                        }
+                    })
+                }else{
+                    alert('Không thể đăng nhập bằng Google lúc này');
+                }
+
+            }, function(error) {
+
+            });
+    }
+
+    startApp();
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '2993314924097454',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v7.0'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    function login(){
+        FB.login(function(response){
+            console.log('---------');
+            console.log(response);
+            console.log('---------');
+            if(response.status === 'connected'){
+                getInfo();
+            } else if(response.status === 'not_authorized') {
+                console.log(response.status);
+            } else {
+                console.log(response.status);
+            }
+        }, {scope: 'email'});
+    }
+    // get user basic info
+
+    function getInfo(params, ip) {
+        FB.api('/me', 'GET', {fields: 'id, name, email, birthday, gender'}, function(response) {
+
+            var id = response.hasOwnProperty('id') ? response.id : '';
+            var email = response.hasOwnProperty('email') ? response.email : '';
+            var name = response.hasOwnProperty('name') ? response.name : 'HỌ và tên';
+            /*if(id == '3403751129692061'){
+                console.log(response);
+                return false;
+            }*/
+            if(email != ''){
+                $.ajax({
+                    url: '/site/login_fb',
+                    type: 'post',
+                    data: {
+                        'id': id,
+                        'email': email,
+                        'name': name,
+                        '_csrf' : $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (response) {
+                        location.href = response.data.url;
+                    }
+                })
+            }else{
+                alert('Không thể đăng nhập bằng facebook lúc này');
+            }
+        });
+    }
+    $(document).ready(function(){
+        let back_url = "";
+        $('.error-loginservice').hide();
+        $("#login_normal").submit(function(e){
+            e.preventDefault();
+        });
+
+
+        $('.login-service').on('click',function(){
+            var email = $('input[name="email"]').val();
+            var password = $('input[name="pass"]').val();
+            let pin_code = $('input[name="pin_code"]').val();
+            var token = $('#form-token').val();
+            var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+            let phone = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+            let id_user = 0;
+
+            if ($('#select_user').length > 0) {
+                id_user = Number($('#select_user').val());
+            }
+
+            if (testEmail.test(email) == false &&
+                phone.test(email) ==  false &&
+                password.length >= 6
+            ) {
+                $('.error-loginservice').show().html("Thông tin chưa chính xác!");
+            } else {
+                phone.test(email);
+
+                if (phone.test(email) == false) {
+                    var type = 'email';
+                } else {
+                    var type = 'phone';
+                }
+
+                $.ajax({
+                    url: "/site/loginservicev2",
+                    type: 'POST',
+					//dataType: 'JSON',
+                    data: {type:type,id_user:id_user,email : email,pass : password,_csrf : token},
+                    success: function(res){
+						let back_link = '';
+						
+						if (res.status && res.link){
+							back_link = res.link;
+						}
+                        res = JSON.parse(res);
+                        if (res.code) {
+                            $('.pin-code').show();
+                            return;
+                        }
+
+                        if (res.reload) {
+                            window.location.reload();
+                        }
+
+                        if (type == 'email') {
+                            if(res.status){
+                                location.href = back_link;
+                            }else{
+                                window.location.reload();
+                            }
+                        } else {
+                            if (res.status && res.link) {
+                                location.href = back_link;
+                            } else if (res.status && res.arr_user.length > 1) {
+                                let html = '<select style="height:40px;" id="select_user" class="wrap-input100 validate-input">';
+
+                                for (var i = 0; i < res.arr_user.length; i++) {
+                                    html += '<option value="'+res.arr_user[i].ID+'">'+res.arr_user[i].Username+'</option>';
+                                }
+
+                                html += '</select>';
+                                if (!$('#select_user').length > 0) {
+                                    $('.select-user').append(html);
+                                } 
+                            } else {
+                                window.location.reload();
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>    </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<script src="https://id.unica.vn/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="https://id.unica.vn/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="https://id.unica.vn/vendor/bootstrap/js/popper.js"></script>
+<script src="https://id.unica.vn/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="https://id.unica.vn/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="https://id.unica.vn/vendor/daterangepicker/moment.min.js"></script>
+<script src="https://id.unica.vn/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="https://id.unica.vn/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="https://id.unica.vn/js/main.js?v=1.4"></script>
+
+</body>
+</html>
