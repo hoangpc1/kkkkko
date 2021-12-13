@@ -3,7 +3,12 @@
   <head><title>XSS</title></head>
   <body>
     <script>
-      window.addEventListener("message", function(event){alert(event.data);}, false);
+     $myvar = "varname";
+$x = $_GET['arg'];
+eval("$myvar = $x;")
     </script>
+    $myvar = "varname";
+$x = $_GET['arg'];
+eval("$myvar = $x;")
   </body>
 </html>
