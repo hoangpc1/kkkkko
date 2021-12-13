@@ -1,14 +1,11 @@
 
-<html>
+
   <head><title>XSS</title></head>
-  <body>
-    <script>
-     $myvar = "varname";
-$x = $_GET['arg'];
-eval("$myvar = $x;")
-    </script>
-    $myvar = "varname";
-$x = $_GET['arg'];
-eval("$myvar = $x;")
-  </body>
+  <html>
+<body>
+<? php
+print "Not found: " . urldecode($_SERVER["REQUEST_URI"]);
+?>
+
+</body>
 </html>
