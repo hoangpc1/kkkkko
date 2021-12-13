@@ -3,9 +3,9 @@
   <head><title>XSS</title></head>
   <html>
 <body>
-<? php
-print "Not found: " . urldecode($_SERVER["REQUEST_URI"]);
-?>
+>script>
+  var xss = '';
+  </script>
 
 </body>
 </html>
