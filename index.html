@@ -3,9 +3,13 @@
   <head><title>XSS</title></head>
   <html>
 <body>
+<script>var productionMode = true;</script>
+<!-- [...] -->
 <script>
-  var xss = '';
-  </script>
+  if (!window.productionMode) {
+    // Some vulnerable debug code
+  }
+</script>
 
 </body>
 </html>
