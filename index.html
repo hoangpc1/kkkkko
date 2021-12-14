@@ -1,248 +1,58 @@
 
+
+
+<!DOCTYPE html>
 <html>
 <head>
-	<title>You searched for 'Array'</title>
-	<script nonce="d8c602f45cbc136164a0d4f10ea71e9">
-		var isProd = true;
-	</script>
-	<script nonce="d8c602f45cbc136164a0d4f10ea71e9">
-		function addJS(src, cb){
-			let s = document.createElement('script');
-			s.src = src;
-			s.onload = cb;
-			let sf = document.getElementsByTagName('script')[0];
-    			sf.parentNode.insertBefore(s, sf);
-		}
-		
-		function initVUE(){
-			if (!window.Vue){
-				setTimeout(initVUE, 100);
-			}
-			new Vue({
-				el: '#app',
-				delimiters: window.delimiters,
-				data: {
-					"owasp":[
-						{"target": "1", "title":"A01:2021-Broken Access Control","description":" moves up from the fifth position to the category with the most serious web application security risk; the contributed data indicates that on average, 3.81% of applications tested had one or more Common Weakness Enumerations (CWEs) with more than 318k occurrences of CWEs in this risk category. The 34 CWEs mapped to Broken Access Control had more occurrences in applications than any other category."},
-						{"target": "2", "title":"A02:2021-Cryptographic Failures","description":" shifts up one position to #2, previously known as A3:2017-Sensitive Data Exposure, which was broad symptom rather than a root cause. The renewed name focuses on failures related to cryptography as it has been implicitly before. This category often leads to sensitive data exposure or system compromise."},
-						{"target": "3", "title":"A03:2021-Injection","description":" slides down to the third position. 94% of the applications were tested for some form of injection with a max incidence rate of 19%, an average incidence rate of 3.37%, and the 33 CWEs mapped into this category have the second most occurrences in applications with 274k occurrences. Cross-site Scripting is now part of this category in this edition."},
-						{"target": "4", "title":"A04:2021-Insecure Design","description":" is a new category for 2021, with a focus on risks related to design flaws. If we genuinely want to \"move left\" as an industry, we need more threat modeling, secure design patterns and principles, and reference architectures. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks."},
-						{"target": "5", "title":"A05:2021-Security Misconfiguration","description":" moves up from #6 in the previous edition; 90% of applications were tested for some form of misconfiguration, with an average incidence rate of 4.5%, and over 208k occurrences of CWEs mapped to this risk category. With more shifts into highly configurable software, it's not surprising to see this category move up. The former category for A4:2017-XML External Entities (XXE) is now part of this risk category."},
-						{"target": "6", "title":"A06:2021-Vulnerable","description":" and Outdated Components was previously titled Using Components with Known Vulnerabilities and is #2 in the Top 10 community survey, but also had enough data to make the Top 10 via data analysis. This category moves up from #9 in 2017 and is a known issue that we struggle to test and assess risk. It is the only category not to have any Common Vulnerability and Exposures (CVEs) mapped to the included CWEs, so a default exploit and impact weights of 5.0 are factored into their scores."},
-						{"target": "7", "title":"A07:2021-Identification and Authentication Failures","description":" was previously Broken Authentication and is sliding down from the second position, and now includes CWEs that are more related to identification failures. This category is still an integral part of the Top 10, but the increased availability of standardized frameworks seems to be helping."},
-						{"target": "8", "title":"A08:2021-Software and Data Integrity Failures","description":" is a new category for 2021, focusing on making assumptions related to software updates, critical data, and CI/CD pipelines without verifying integrity. One of the highest weighted impacts from Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) data mapped to the 10 CWEs in this category. A8:2017-Insecure Deserialization is now a part of this larger category."},
-						{"target": "9", "title":"A09:2021-Security Logging and Monitoring Failures","description":" was previously A10:2017-Insufficient Logging & Monitoring and is added from the Top 10 community survey (#3), moving up from #10 previously. This category is expanded to include more types of failures, is challenging to test for, and isn't well represented in the CVE/CVSS data. However, failures in this category can directly impact visibility, incident alerting, and forensics."},
-						{"target": "10", "title":"A10:2021-Server-Side Request Forgery","description":" is added from the Top 10 community survey (#1). The data shows a relatively low incidence rate with above average testing coverage, along with above-average ratings for Exploit and Impact potential. This category represents the scenario where the security community members are telling us this is important, even though it's not illustrated in the data at this time."},
-						].filter(e=>{
-							return (e.title + ' - ' + e.description)
-								.includes(new URL(location).searchParams.get('s')|| ' ');
-						}),
-					"search": new URL(location).searchParams.get('s')
-				}
-			})
-		}
-	</script>
-	<script nonce="d8c602f45cbc136164a0d4f10ea71e9">
-		var delimiters = ['v-{{', '}}'];
-		addJS('./vuejs.php', initVUE);
-	</script>
-	<script nonce="d8c602f45cbc136164a0d4f10ea71e9">
-		if (!window.isProd){
-			let version = new URL(location).searchParams.get('version') || '';
-			version = version.slice(0,12);
-			let vueDevtools = new URL(location).searchParams.get('vueDevtools') || '';
-			vueDevtools = vueDevtools.replace(/[^0-9%a-z/.]/gi,'').replace(/^\/\/+/,'');
-
-			if (version === 999999999999){
-				setTimeout(window.legacyLogger, 1000);
-			} else if (version > 1000000000000){
-				addJS(vueDevtools, window.initVUE);
-			} else{
-				console.log(performance)
-			}
-		}
-	</script>
-    <style>
-        body {
-            color: #b7b7b7;;
-            text-align: center;
-            background: #262a2b;
-            font-family: 'helvetica', san-serif;
-        }
-        .tilesWrap {
-            padding: 0;
-            margin: 50px auto;
-            list-style: none;
-            text-align: center;
-        }
-        .tilesWrap li {
-            display: inline-block;
-            width: 20%;
-            min-width: 200px;
-            max-width: 230px;
-            padding: 80px 20px 40px;
-            position: relative;
-            vertical-align: top;
-            margin: 10px;
-            font-family: 'helvetica', san-serif;
-            min-height: 25vh;
-            background: #262a2b;
-            border: 1px solid #252727;
-            text-align: left;
-        }
-        .tilesWrap li h2 {
-            font-size: 114px;
-            margin: 0;
-            position: absolute;
-            opacity: 0.2;
-            top: 50px;
-            right: 10px;
-            transition: all 0.3s ease-in-out;
-        }
-        .tilesWrap li strong {
-            font-size: 20px;
-            color: #b7b7b7;
-            margin-bottom: 5px;
-        }
-        .tilesWrap li p {
-            font-size: 16px;
-            line-height: 18px;
-            color: #b7b7b7;
-            margin-top: 5px;
-        }
-        .tilesWrap li a {
-            background: transparent;
-            border: 1px solid #b7b7b7;
-            padding: 10px 20px;
-            color: #b7b7b7;
-            border-radius: 3px;
-            position: relative;
-            transition: all 0.3s ease-in-out;
-            transform: translateY(-40px);
-            opacity: 0;
-            cursor: pointer;
-            overflow: hidden;
-            display: inline-block;
-            z-index: 1;
-            text-decoration: none;
-        }
-        .tilesWrap li a:before {
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 120%;
-            background: #b7b7b7;
-            top: 0;
-            opacity: 0;
-            left: -140px;
-            border-radius: 0 20px 20px 0;
-            z-index: -1;
-            transition: all 0.3s ease-in-out;
-        }
-        .tilesWrap li:hover a {
-            transform: translateY(5px);
-            opacity: 1;
-        }
-        .tilesWrap li button:hover {
-            color: #262a2b;
-        }
-        .tilesWrap li a:hover:before {
-            left: 0;
-            opacity: 1;
-        }
-        .tilesWrap li:hover h2 {
-            top: 0px;
-            opacity: 0.6;
-        }
-        .tilesWrap li:before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            z-index: -1;
-            background: #fff;
-            transform: skew(2deg, 2deg);
-        }
-        .tilesWrap li:after {
-            content: '';
-            position: absolute;
-            width: 40%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            background: rgba(255, 255, 255, 0.02);
-        }
-        .tilesWrap li:nth-child(1):before {
-            background: #C9FFBF;
-            background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
-            background: linear-gradient(to right, #FFAFBD, #C9FFBF);
-        }
-        .tilesWrap li:nth-child(2):before {
-            background: #f2709c;
-            background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
-            background: linear-gradient(to right, #ff9472, #f2709c);
-        }
-        .tilesWrap li:nth-child(3):before {
-            background: #c21500;
-            background: -webkit-linear-gradient(to right, #ffc500, #c21500);
-            background: linear-gradient(to right, #ffc500, #c21500);
-        }
-        .tilesWrap li:nth-child(4):before {
-            background: #FC354C;
-            background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
-            background: linear-gradient(to right, #0ABFBC, #FC354C);
-        }
-        .tilesWrap li:nth-child(5):before {
-            background: #C9FFBF;
-            background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
-            background: linear-gradient(to right, #FFAFBD, #C9FFBF);
-        }
-        .tilesWrap li:nth-child(6):before {
-            background: #f2709c;
-            background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
-            background: linear-gradient(to right, #ff9472, #f2709c);
-        }
-        .tilesWrap li:nth-child(7):before {
-            background: #c21500;
-            background: -webkit-linear-gradient(to right, #ffc500, #c21500);
-            background: linear-gradient(to right, #ffc500, #c21500);
-        }
-        .tilesWrap li:nth-child(8):before {
-            background: #FC354C;
-            background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
-            background: linear-gradient(to right, #0ABFBC, #FC354C);
-        }
-        .tilesWrap li:nth-child(9):before {
-            background: #C9FFBF;
-            background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
-            background: linear-gradient(to right, #FFAFBD, #C9FFBF);
-        }
-        .tilesWrap li:nth-child(10):before {
-            background: #f2709c;
-            background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
-            background: linear-gradient(to right, #ff9472, #f2709c);
-        }
-    </style>
+  <title>Intigriti January Challenge</title>
+  <meta charset="UTF-8">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@intigriti">
+  <meta name="twitter:creator" content="@intigriti">
+  <meta name="twitter:title" content="January XSS Challenge - Intigriti">
+  <meta name="twitter:description" content="Find the XSS and WIN Intigriti swag.">
+  <meta name="twitter:image" content="https://challenge-0121.intigriti.io/share.jpg">
+  <meta property="og:url" content="https://challenge-0121.intigriti.io" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="January XSS Challenge - Intigriti" />
+  <meta property="og:description" content="Find the XSS and WIN Intigriti swag." />
+  <meta property="og:image" content="https://challenge-0121.intigriti.io/share.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
-<div id="app">
-<form action="" method="GET">
-<input type="text "name="s" v-model="search"/>
-<input type="submit" value="🔍">
-</form>
-<p>You searched for v-{{search}}</p>
-<ul class="tilesWrap">
-  <li v-for="item in owasp">
-    <h2>v-{{item.target}}</h2>
-    <h3>v-{{item.title}}</h3>
-    <p>v-{{item.description}}</p>
-    <p>
-      <a v-bind:href="'https://blog.intigriti.com/2021/09/10/owasp-top-10/#'+item.target" target="blog" class="readMore">Read more</a>
-    </p>
-  </li>
-</ul>
-</div>
+  <div id="popover"><p>We just hit 30,000 Twitter followers! Thank you!</p></div>
+  <section id="wrapper">
+  <header>
+    <img src="./logo-researcher.png">
+    <h1><a href="https://www.intigriti.com">Intigriti</a>'s January XSS Challenge</h1>
+  </header>
+  <section id="rules">
+    <div id="challenge-container">
+  <div id="challenge-info">
+    <p>Find a way to execute arbitrary javascript on this page and win Intigriti swag.</p>
+    <b>Rules:</b>
+    <ul>
+      <li>This challenge runs from January 25th until January 31th, 11:59 PM CET.</li>
+      <li>Out of all correct submissions, we will draw <b>six</b> winners on Monday, February 1st:
+        <ul>
+          <li>Three randomly drawn correct submissions</li>
+          <li>Three best write-ups</li>
+        </ul>
+      </li>
+      <li>Every winner gets a €50 swag voucher for our <a href="https://swag.intigriti.com" target="_blank">swag shop</a></li>
+      <li>The winners will be announced on our <a href="https://twitter.com/intigriti" target="_blank">Twitter profile</a>.</li>
+      <li>For every 100 likes, we'll add a tip to <a href="https://go.intigriti.com/challenge-tips" target="_blank">announcement tweet</a>.</li>
+    </ul>
+    <b>The solution...</b>
+    <ul>
+      <li>Should work on the latest version of Firefox or Chrome</li>
+      <li>Should <code>alert()</code> the following flag: <code id="flag">{THIS_IS_THE_FLAG}</code>.</li>
+      <li>Should leverage a cross site scripting vulnerability on this page.</li>
+      <li>Shouldn't be self-XSS or related to MiTM attacks</li>
+      <li>Should be reported at <a href="https://go.intigriti.com/submit-solution">go.intigriti.com/submit-solution</a></li>
+    </ul>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
