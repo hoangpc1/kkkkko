@@ -1,14 +1,20 @@
 <html>
-<h2>Words search form</h2>  
+<h2>Mensajes</h2>   
 <?php
-   echo "<form action='index.php' method='get'>
-   <p>Palabra a buscar: <input type='text' name='palabra'></p>
-   <input type='submit' value='Enviar'>
-   </form>
-   <br>
-   <br>";
-   if($_GET){
-    echo "La palabra ".$_GET['palabra']. " ha obtenido el resultado de ...";
+include("conexion.php");
+echo "<form action='index.php' method='post'>
+<p>Mensaje a introducir: <input type='text' name='mensaje'></p>
+<input type='submit' value='Enviar'>
+</form>
+<br>
+<br>";
+if($_POST){
+    $mensaje=$_POST['mensaje'];
+    $conexion->query("insert into mensajes(mensaje) values('$mensaje')");
     }
+$result=$conexion->query("select * from mensajes");
+while($line=mysqli_fetch_array($result)){   
+    echo "Mensaje: ".$line['mensaje']."<br>";
+        }
 ?>
 </html>
